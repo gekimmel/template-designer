@@ -5,18 +5,8 @@
 #   - process template.txt and replace value placeholders 
 #   - generate resultfile
 #
-# example data.txt:
-# TPL_ALERTNAME="McsBackupOperator",TPL_METRICSNAME="mcs-backup-operator-metrics",TPL_ENDPOINT="cr-metrics",TPL_MESSAGE="failure in backup oerator"
-# TPL_ALERTNAME="McsHealthOperator",TPL_METRICSNAME="mcs-health-operator-metrics",TPL_ENDPOINT="http-metrics",TPL_MESSAGE="failure in health oerator"
-# TPL_ALERTNAME="McsHiveOperator",TPL_METRICSNAME="mcs-hive-operator-metrics",TPL_ENDPOINT="cr-metrics",TPL_MESSAGE="failure in hive oerator"
-#
-# example template.txt:
-#         - alert: TPL_ALERTNAME
-#          expr: absent(up{job="TPL_METRICSNAME",endpoint="TPL_ENDPOINT"} == 1)
-#          for: 15m
-#          annotations:
-#            message: TPL_MESSAGE
-#
+# source:
+#   https://github.com/gekimmel/template-designer
 
 DATAFILE="data.txt"
 TEMPLATEFILE="template.txt"
