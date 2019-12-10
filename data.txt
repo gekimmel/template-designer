@@ -1,0 +1,3 @@
+TPL_ALERTNAME="McsBackupOperator",TPL_METRICSNAME="mcs-backup-operator-metrics",TPL_ENDPOINT="cr-metrics",TPL_MESSAGE="failure in backup oerator"
+TPL_ALERTNAME="McsHealthOperator",TPL_METRICSNAME="mcs-health-operator-metrics",TPL_ENDPOINT="http-metrics",TPL_MESSAGE="failure in health oerator"
+TPL_ALERTNAME="McsHiveOperator",TPL_METRICSNAME="mcs-hive-operator-metrics",TPL_ENDPOINT="cr-metrics",TPL_MESSAGE="failure in hive oerator"
