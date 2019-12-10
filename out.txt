@@ -1,18 +1,18 @@
-        - alert: McsBackupOperator
-          expr: absent(up{job="mcs-backup-operator-metrics",endpoint="cr-metrics"} == 1)
-          for: 15m
-          annotations:
-            message: failure in backup oerator
+  - alert: BackupOperator
+    expr: absent(up{job="backup-operator-metrics",endpoint="cr-metrics"} == 1)
+    for: 15m
+    annotations:
+      message: failure in backup operator
 
-        - alert: McsHealthOperator
-          expr: absent(up{job="mcs-health-operator-metrics",endpoint="http-metrics"} == 1)
-          for: 15m
-          annotations:
-            message: failure in health oerator
+  - alert: HealthOperator
+    expr: absent(up{job="health-operator-metrics",endpoint="http-metrics"} == 1)
+    for: 15m
+    annotations:
+      message: failure in health operator
 
-        - alert: McsHiveOperator
-          expr: absent(up{job="mcs-hive-operator-metrics",endpoint="cr-metrics"} == 1)
-          for: 15m
-          annotations:
-            message: failure in hive oerator
+  - alert: HiveOperator
+    expr: absent(up{job="hive-operator-metrics",endpoint="cr-metrics"} == 1)
+    for: 15m
+    annotations:
+      message: failure in hive operator
 

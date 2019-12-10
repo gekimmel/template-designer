@@ -1,6 +1,6 @@
-        - alert: TPL_ALERTNAME
-          expr: absent(up{job="TPL_METRICSNAME",endpoint="TPL_ENDPOINT"} == 1)
-          for: 15m
-          annotations:
-            message: TPL_MESSAGE
+  - alert: TPL_ALERTNAME
+    expr: absent(up{job="TPL_METRICSNAME",endpoint="TPL_ENDPOINT"} == 1)
+    for: 15m
+    annotations:
+      message: TPL_MESSAGE
 
